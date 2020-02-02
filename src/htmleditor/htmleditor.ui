@@ -193,15 +193,6 @@
          <property name="bottomMargin">
           <number>0</number>
          </property>
-         <item>
-          <widget class="QWebView" name="webView">
-           <property name="url">
-            <url>
-             <string>about:blank</string>
-            </url>
-           </property>
-          </widget>
-         </item>
         </layout>
        </widget>
        <widget class="QWidget" name="tab_2">
@@ -238,8 +229,7 @@
   <action name="actionFileNew">
    <property name="icon">
     <iconset theme="document-new">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;New</string>
@@ -626,13 +616,6 @@
    </property>
   </action>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>QWebView</class>
-   <extends>QWidget</extends>
-   <header>QWebView</header>
-  </customwidget>
- </customwidgets>
  <resources>
   <include location="../../icons/resources.qrc"/>
  </resources>

@@ -18,7 +18,7 @@
 
 #include "qmlhtmleditor.h"
 #include "mainwindow.h"
-#include "htmleditor/htmleditor.h"
+// #include "htmleditor/htmleditor.h"
 
 QmlHtmlEditor::QmlHtmlEditor()
     : QObject()
@@ -28,6 +28,8 @@ QmlHtmlEditor::QmlHtmlEditor()
 void QmlHtmlEditor::edit(QString file)
 {
     MAIN.editHTML(file);
+    /*
     connect(MAIN.htmlEditor(), SIGNAL(closed()), SIGNAL(closed()));
     connect(MAIN.htmlEditor(), SIGNAL(saved()), SIGNAL(saved()));
+    */
 }

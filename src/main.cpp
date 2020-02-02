@@ -296,7 +296,7 @@ protected:
 int main(int argc, char **argv)
 {
 #if defined(Q_OS_WIN) && defined(QT_DEBUG)
-    ExcHndlInit();
+    // ExcHndlInit();
 #endif
 #if QT_VERSION >= 0x050600
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);

@@ -1,6 +1,6 @@
 CONFIG   += link_prl
 
-QT       += widgets opengl xml network printsupport qml quick sql webkitwidgets
+QT       += widgets opengl xml network printsupport qml quick sql # webkitwidgets
 QT       += multimedia websockets quickwidgets
 QT       += qml-private core-private quick-private gui-private
 
@@ -63,7 +63,6 @@ SOURCES += main.cpp\
     qmltypes/qmlmetadata.cpp \
     qmltypes/timelineitems.cpp \
     qmltypes/qmlprofile.cpp \
-    htmleditor/htmleditor.cpp \
     htmleditor/highlighter.cpp \
     settings.cpp \
     widgets/lineeditclear.cpp \
@@ -182,7 +181,6 @@ HEADERS  += mainwindow.h \
     qmltypes/qmlmetadata.h \
     qmltypes/timelineitems.h \
     qmltypes/qmlprofile.h \
-    htmleditor/htmleditor.h \
     htmleditor/highlighter.h \
     settings.h \
     widgets/lineeditclear.h \
@@ -355,6 +353,11 @@ mac {
 }
 win32 {
     CONFIG += windows rtti
+
+    MLT_PATH = C:\\MinGW\\msys\\1.0\\local
+    # PREFIX = D:\\Projects\\Shotcut
+    # INCLUDEPATH += C:\\MinGW\\include
+
     isEmpty(MLT_PATH) {
         message("MLT_PATH not set; using ..\\..\\... You can change this with 'qmake MLT_PATH=...'")
         MLT_PATH = ..\\..\\..

@@ -50,7 +50,7 @@
 #include "controllers/scopecontroller.h"
 #include "docks/filtersdock.h"
 #include "dialogs/customprofiledialog.h"
-#include "htmleditor/htmleditor.h"
+// #include "htmleditor/htmleditor.h"
 #include "settings.h"
 #include "leapnetworklistener.h"
 #include "database.h"
@@ -2375,6 +2375,7 @@ void MainWindow::dropEvent(QDropEvent *event)
 void MainWindow::closeEvent(QCloseEvent* event)
 {
     if (continueJobsRunning() && continueModified()) {
+        /*
         if (!m_htmlEditor || m_htmlEditor->close()) {
             LOG_DEBUG() << "begin";
             JOBS.cleanup();
@@ -2403,6 +2404,7 @@ void MainWindow::closeEvent(QCloseEvent* event)
             }
             return;
         }
+        */
     }
     event->ignore();
 }
@@ -3055,6 +3057,7 @@ void MainWindow::onGpuNotSupported()
 
 void MainWindow::editHTML(const QString &fileName)
 {
+    /*
     bool isNew = !m_htmlEditor;
     if (isNew) {
         m_htmlEditor.reset(new HtmlEditor);
@@ -3090,6 +3093,7 @@ void MainWindow::editHTML(const QString &fileName)
         point -= halfSize;
         m_htmlEditor->move(point);
     }
+    */
 }
 
 void MainWindow::stepLeftOneFrame()
